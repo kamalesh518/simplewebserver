@@ -1,8 +1,8 @@
 # EX01 Developing a Simple Webserver
-## Date:11.9.25
+## Date:
 
 ## AIM:
-To develop a simple webserver to serve html pages and display the configuration details of laptop.
+To develop a simple webserver to serve html pages and display the list of protocols in TCP/IP Protocol Suite.
 
 ## DESIGN STEPS:
 ### Step 1: 
@@ -15,60 +15,58 @@ Design of webserver workflow.
 Implementation using Python code.
 
 ### Step 4:
-Serving the HTML pages.
+Import the necessary modules.
 
 ### Step 5:
-Testing the webserver.
+Define a custom request handler.
+
+### Step 6:
+Start an HTTP server on a specific port.
+
+### Step 7:
+Run the Python script to serve web pages.
+
+### Step 8:
+Serve the HTML pages.
+
+### Step 9:
+Start the server script and check for errors.
+
+### Step 10:
+Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
 ```
+
+content ='''
 <!DOCTYPE html>
-<head>
-    <title>LAPTOP CONFIGURATION</title>
-</head>
-
-<body><center>
-    <h1>My laptop configuration</h1>MOHAMED FAIZAL<h1></h1></center>
-    <table border="2px" align="center" cellpadding="10" style="background-color: antiquewhite;" >
-    <tr style="color: black; ">
-        <th>DEVICE SPECIFICATION</th>
-        <th>DETAILS</th>
-    </tr>
-    <tr style="color: rgb(0, 0, 0); ">
-        <td>BRAND</td>
-        <td>LENOVO</td>
-    </tr>
-    <tr>
-        <td>MODEL NAME</td>
-        <td>E15 GEN 4</td>
-    </tr>
-    <tr>
-        <td>SCREEN SIZE</td>
-        <td>15.6 inches</td>
-    </tr>
-    <tr>
-        <td>COLOR</td>
-        <td>BLACK</td>
-    </tr>
-    <tr>
-        <td>RAM</td>
-        <td>16GB</td>
-    </tr>
-    <tr>
-        <td>HARD DISK</td>
-        <td>CORE i5</td>
-    </tr>
-    <tr>
-        <td>GRAPHICS CARD</td>
-        <td>NVIDIA</td>
-    </tr>
-    <tr>
-        <td>SYSTEM TYPE</td>
-        <td>64 BIT-OS,X64</td>
-    </tr>
-</table>
-
-</body>
+    <head>
+        <center>
+        <TITLE> TYPES OF PROTOCOLS</TITLE></center>
+    </head>
+    <body>
+        <center><table border="6" bgcolor="white" WIDTH="600PX" HEIGHT="400PX"></center>
+        <caption> <h1>LIST OF PROTOCALS IN TCP/IP PROTOCOL SUITE</h1></caption>
+        <br></br>
+        5
+            <tr bgcolor="pink">
+                <th>S.no</th> <th>Name of the Layer</th> <th>Name of the Protocols</th>
+            </tr>
+            <tr>
+                <td>1.</td> <td>Application layer</td> <td>HTTP, FTP, DNS</td>
+            </tr>
+            <tr>
+                <td>2.</td> <td>Transport layer</td> <td>TCP, UDP</td>
+            </tr>
+            <tr>
+                <td>3.</td> <td>Internet layer</td> <td>IPV4/IPV6</td>
+            </tr>
+            <tr>
+                <td>4.</td> <td>Network access layer</td> <td>MAC, Ethernet</td>
+            </tr>
+        </table>
+    </body>
+</html>'''
 
 
 
@@ -86,11 +84,10 @@ httpd = HTTPServer(server_address,MyServer)
 httpd.serve_forever()
 ```
 
-
-
 ## OUTPUT:
-![Screenshot 2024-09-26 225257](https://github.com/user-attachments/assets/ca69a3a7-5a26-4d5a-b253-8604763b9e7b)
+<img width="1714" height="931" alt="image" src="https://github.com/user-attachments/assets/fab5b589-5005-4177-b6d2-d5a479b12c46" />
+
+
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
-
